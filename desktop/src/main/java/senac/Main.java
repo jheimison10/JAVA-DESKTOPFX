@@ -1,6 +1,7 @@
 package senac;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -14,33 +15,13 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage stage) {
-        Label label = new Label("Digite seu nome");
-        TextField textField = new TextField();
+    public void start(Stage stage) throws Exception {
+        VBox root = FXMLLoader.load(getClass().getResource("/interface.fxml"));
 
-        Button botao = new Button("Mostrar Saudação");
-        Label saudacao = new Label();
+       Scene scene = new Scene(root, 300, 200);
 
-        botao.setOnAction(e -> {
-            // 1. Obtém o texto do campo (por exemplo: "Maria")
-            String nome = textField.getText();
-            
-            // 2. APLICAÇÃO DO toUpperCase()
-            // Converte o nome para MAIÚSCULAS (por exemplo: "MARIA")
-            String nomeMaiusculo = nome.toUpperCase();
-            
-            // 3. Usa a nova string em maiúsculas na saudação
-            saudacao.setText("Olá, " + nomeMaiusculo + " ! Seja bem vindo(a).");
-        });
-
-        VBox vbox = new VBox(10);
-        // Observação: Corrigi um erro de digitação no seu estilo: "-fx-akignment" -> "-fx-alignment"
-        vbox.setStyle("-fx-padding: 20; -fx-alignment: center;"); 
-        vbox.getChildren().addAll(label, textField, botao, saudacao);
-        
-        Scene scene = new Scene(vbox, 400, 200);
         stage.setScene(scene);
-        stage.setTitle("JavaFX + input de Nome");
+        stage.setTitle("Exemplo javaFX");
         stage.show();
     }
 }
