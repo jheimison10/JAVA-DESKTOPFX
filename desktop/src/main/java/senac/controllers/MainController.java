@@ -34,6 +34,11 @@ public class MainController {
         if(idade == null || idade.trim().isEmpty()){
             showAlert("Idade e obrigatorio");
         }
+        
+        if (idade == "18"){
+
+        }
+
 
         if(email == null || email.trim().isEmpty()){
             showAlert("Email e obrigatorio");
