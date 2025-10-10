@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?> <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?> <VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="senac.controllers.MainController" spacing="10" alignment="CENTER" prefWidth="200" prefHeight="100">
+
+    <Label id="label" text="Formulario de cadastro"  style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Nome:" minWidth="80"/>
+        <TextField fx:id="nomeField" promptText="Digite seu nome"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Email:" minWidth="80"/>
+        <TextField fx:id="emailField" promptText="Digite seu email"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Idade:" minWidth="80"/>
+        <TextField fx:id="idadeField" promptText="Digite sua idade"/>
+    </HBox>
+
+    <Button text="Enviar" onAction="#handleEnviar"/>
+
+</VBox>
