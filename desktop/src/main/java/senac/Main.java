@@ -12,9 +12,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
 
 public class Main extends Application {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         launch();
     }
 
@@ -22,10 +24,10 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         VBox root = FXMLLoader.load(getClass().getResource("/interface.fxml"));
 
-       Scene scene = new Scene(root, 300, 200);
+        Scene scene = new Scene(root, 300, 200);
 
         stage.setScene(scene);
-        stage.setTitle("Exemplo javaFX");
+        stage.setTitle("Cadastro de Pessoas");
         stage.show();
     }
 }
