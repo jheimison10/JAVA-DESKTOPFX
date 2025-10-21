@@ -19,7 +19,8 @@
         <Menu text="Ajuda">
             <MenuItem text="Sobre" onAction="#handleSobre"/>
         </Menu>
-        <Menu text="Cadastro de Endereço">
+        <Menu text="Cadastro">
+            <MenuItem text="Endereço" onAction="#handleNovoEndereco"/>
         </Menu>
     </MenuBar>
 
