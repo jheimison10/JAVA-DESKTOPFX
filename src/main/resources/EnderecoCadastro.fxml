@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="senac.controllers.EnderecoController"
+      alignment="CENTER" spacing="15">
+
+    <Label text="Cadastro de Endereço" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Logradouro:" minWidth="100"/>
+        <TextField fx:id="logradouroField" promptText="Rua / Avenida" prefWidth="250"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Número:" minWidth="100"/>
+        <TextField fx:id="numeroField" promptText="Número da residência" prefWidth="100"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Complemento:" minWidth="100"/>
+        <TextField fx:id="complementoField" promptText="Apartamento, Bloco, etc." prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Bairro:" minWidth="100"/>
+        <TextField fx:id="bairroField" promptText="Digite o bairro" prefWidth="200" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Cidade:" minWidth="100"/>
+        <TextField fx:id="cidadeField" promptText="Digite a cidade" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Estado:" minWidth="100"/>
+        <TextField fx:id="estadoField" promptText="UF (ex: SP)" prefWidth="60"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="CEP:" minWidth="100"/>
+        <TextField fx:id="cepField" promptText="00000-000" prefWidth="120"/>
+    </HBox>
+
+    <Button text="Salvar Endereço" onAction="#handleSalvarEndereco" prefWidth="200"/>
+
+    </VBox>
